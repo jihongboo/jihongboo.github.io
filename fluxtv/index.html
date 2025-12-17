@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxTV - IPTV Streaming for Apple Devices</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --text-primary: #1d1d1f; --text-secondary: #86868b; --bg-primary: #fbfbfd; --bg-secondary: #f5f5f7; --accent: #0071e3; }
+        body { font-family: -apple-system, BlinkMacSystemFont, SF Pro Display, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: var(--text-primary); background: var(--bg-primary); -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; left: 0; right: 0; height: 48px; background: rgba(251, 251, 253, 0.8); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); z-index: 1000; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        nav .nav-content { max-width: 980px; width: 100%; padding: 0 22px; display: flex; align-items: center; justify-content: space-between; }
+        nav .logo { font-size: 21px; font-weight: 600; color: var(--text-primary); text-decoration: none; }
+        nav .nav-links { display: flex; gap: 30px; }
+        nav .nav-links a { font-size: 12px; color: var(--text-primary); text-decoration: none; opacity: 0.8; transition: opacity 0.3s; }
+        nav .nav-links a:hover { opacity: 1; }
+        .hero { padding: 140px 20px 80px; text-align: center; background: linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 100%); }
+        .hero h1 { font-size: 56px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 10px; }
+        .hero .tagline { font-size: 28px; font-weight: 400; color: var(--text-secondary); margin-bottom: 20px; }
+        .hero .description { font-size: 17px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px; }
+        .hero .platforms { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
+        .hero .platforms span { font-size: 14px; color: var(--text-secondary); }
+        .hero .cta { display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 980px; font-size: 17px; text-decoration: none; transition: background 0.3s; }
+        .hero .cta:hover { background: #0077ed; }
+        .showcase { padding: 60px 20px; overflow: hidden; }
+        .showcase .devices { display: flex; justify-content: center; align-items: flex-end; gap: 40px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
+        .showcase .device { text-align: center; }
+        .showcase .device img { border-radius: 12px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); transition: transform 0.3s; max-width: 100%; }
+        .showcase .device img:hover { transform: translateY(-10px); }
+        .showcase .device-iphone img { width: 180px; }
+        .showcase .device-mac img { width: 400px; }
+        .showcase .device-tv img { width: 500px; }
+        .showcase .device-label { margin-top: 15px; font-size: 14px; color: var(--text-secondary); }
+        .features { padding: 100px 20px; background: white; }
+        .features h2 { font-size: 48px; font-weight: 600; text-align: center; margin-bottom: 60px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 980px; margin: 0 auto; }
+        .feature-card { text-align: center; padding: 30px; }
+        .feature-card .icon { width: 56px; height: 56px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 24px; color: white; }
+        .feature-card h3 { font-size: 21px; font-weight: 600; margin-bottom: 10px; }
+        .feature-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        footer { background: var(--bg-secondary); padding: 40px 20px; text-align: center; }
+        footer .links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        footer .links a { font-size: 12px; color: var(--text-secondary); text-decoration: none; }
+        footer .links a:hover { color: var(--text-primary); }
+        footer .copyright { font-size: 12px; color: var(--text-secondary); }
+        @media (max-width: 768px) { .hero h1 { font-size: 40px; } .hero .tagline { font-size: 21px; } .showcase .device-mac img, .showcase .device-tv img { width: 100%; max-width: 350px; } .features h2 { font-size: 32px; } nav .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <nav><div class="nav-content"><a href="#" class="logo">FluxTV</a><div class="nav-links"><a href="#features">Features</a><a href="support.html">Support</a><a href="privacy-policy.html">Privacy</a></div></div></nav>
+    <section class="hero">
+        <h1>FluxTV</h1>
+        <p class="tagline">IPTV Streaming, Everywhere.</p>
+        <p class="description">A beautifully designed IPTV player for all your Apple devices. Import your M3U playlists and enjoy your favorite channels with a native experience.</p>
+        <div class="platforms"><span>iPhone</span><span>iPad</span><span>Mac</span><span>Apple TV</span><span>Vision Pro</span></div>
+        <a href="#" class="cta">Download on the App Store</a>
+    </section>
+    <section class="showcase">
+        <div class="devices">
+            <div class="device device-iphone"><img src="images/Simulator Screenshot - iPhone.png" alt="FluxTV on iPhone"><p class="device-label">iPhone</p></div>
+            <div class="device device-mac"><img src="images/Simulator Screenshot - Mac.png" alt="FluxTV on Mac"><p class="device-label">Mac</p></div>
+            <div class="device device-tv"><img src="images/Simulator Screenshot - Apple TV.png" alt="FluxTV on Apple TV"><p class="device-label">Apple TV</p></div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card"><div class="icon">M3U</div><h3>M3U Import</h3><p>Import your IPTV playlists via M3U or M3U8 URLs. Channels are automatically organized by categories.</p></div>
+            <div class="feature-card"><div class="icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">FAV</div><h3>Favorites</h3><p>Mark your favorite channels for quick access. Your preferences are saved locally on each device.</p></div>
+            <div class="feature-card"><div class="icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">ms</div><h3>Latency Check</h3><p>Real-time status badges show channel availability before you tune in.</p></div>
+            <div class="feature-card"><div class="icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">?</div><h3>Search</h3><p>Quickly find channels across all your sources with powerful search.</p></div>
+            <div class="feature-card"><div class="icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">PiP</div><h3>Picture in Picture</h3><p>Keep watching while you multitask with native PiP support on compatible devices.</p></div>
+            <div class="feature-card"><div class="icon" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">UI</div><h3>Native Design</h3><p>Built with SwiftUI for a truly native experience on every Apple platform.</p></div>
+        </div>
+    </section>
+    <footer>
+        <div class="links"><a href="support.html">Support</a><a href="privacy-policy.html">Privacy Policy</a><a href="mailto:jihongboo@icloud.com">Contact</a></div>
+        <p class="copyright">Copyright 2025 FluxTV. All rights reserved.</p>
+    </footer>
+</body>
+</html>
